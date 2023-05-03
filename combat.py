@@ -1,9 +1,17 @@
 import tkinter as tk
-import pypokedex
 import PIL.Image, PIL.ImageTk
+#from PIL import Image, ImageTk
+# Use the PIL module functions and classes here
 import json
 import requests
 from io import BytesIO
+import pypokedex
+
+
+pikachu = pypokedex.get(name='pikachu')
+print(pikachu.name)   # Output: Pikachu
+print(pikachu.types)  # Output: ['Electric']
+print(pikachu.sprites.front.get('default')) # Output: https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png
 
 
 combat = tk.Tk()
